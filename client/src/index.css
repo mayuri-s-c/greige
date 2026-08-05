@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Instrument Serif", Georgia, serif;
+  --font-sans: "Outfit", sans-serif;
+
+  /* Cool greige commerce — professional B2B atelier */
+  --color-ink: #12141a;
+  --color-ink-soft: #5c6170;
+  --color-greige: #e2dfd8;
+  --color-greige-deep: #c4c0b6;
+  --color-linen: #f5f4f1;
+  --color-stone: #ebeae6;
+  --color-indigo: #1a3654;
+  --color-indigo-deep: #102538;
+  --color-rust: #b42318;
+  --color-line: #d9d5cd;
+  --color-panel: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background:
+    radial-gradient(ellipse 85% 50% at 0% 0%, rgba(26, 54, 84, 0.07), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(18, 20, 26, 0.04), transparent 50%),
+    radial-gradient(ellipse 50% 35% at 50% 100%, rgba(196, 192, 182, 0.28), transparent),
+    var(--color-linen);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(26, 54, 84, 0.18);
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+.texture-grid {
+  background-image:
+    linear-gradient(rgba(18, 20, 26, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 20, 26, 0.03) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.weave-overlay {
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.06) 2px,
+    rgba(255, 255, 255, 0.06) 3px
+  );
+}
+
+.panel-surface {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.78)),
+    var(--color-panel);
+  border: 1px solid var(--color-line);
+  box-shadow: 0 1px 0 rgba(18, 20, 26, 0.03);
+}
+
+.mill-rail {
+  background: linear-gradient(180deg, #12141a 0%, #1a1e28 100%);
+}
+
+.input-field {
+  width: 100%;
+  border: 1px solid var(--color-line);
+  background: rgba(255, 255, 255, 0.72);
+  padding: 0.7rem 0.9rem;
+  outline: none;
+  transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input-field:focus {
+  border-color: var(--color-indigo);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(26, 54, 84, 0.1);
+}
+
+.btn-primary {
+  background: var(--color-ink);
+  color: var(--color-linen);
+  padding: 0.7rem 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+a.btn-primary,
+button.btn-primary {
+  color: var(--color-linen);
+}
+
+.btn-primary:hover {
+  background: var(--color-indigo-deep);
+  color: var(--color-linen);
+}
+
+.btn-secondary {
+  border: 1px solid var(--color-line);
+  background: rgba(255, 255, 255, 0.55);
+  padding: 0.7rem 1.2rem;
+  font-weight: 500;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-ink);
+  background: #fff;
+}
+
+.btn-accent {
+  background: var(--color-indigo);
+  color: #f5f4f1;
+  padding: 0.7rem 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: background 0.15s ease;
+}
+
+.btn-accent:hover {
+  background: var(--color-indigo-deep);
+}
+
+.status-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.scroll-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scroll-thin::-webkit-scrollbar-thumb {
+  background: var(--color-greige-deep);
+  border-radius: 999px;
+}
+
+@keyframes grain-shift {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-2%, -1%, 0); }
+}
+
+@keyframes fabric-drift {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 48px 0, 0 36px; }
+}
+
+.fabric-weave-macro {
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 10px,
+      rgba(245, 244, 241, 0.22) 10px,
+      rgba(245, 244, 241, 0.22) 12px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 10px,
+      rgba(245, 244, 241, 0.12) 10px,
+      rgba(245, 244, 241, 0.12) 12px
+    );
+}
+
+.fabric-weft-macro {
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 18px,
+    rgba(196, 192, 182, 0.18) 18px,
+    rgba(196, 192, 182, 0.18) 20px
+  );
+}
+
+.fabric-weave-fine {
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 3px,
+      rgba(255, 255, 255, 0.12) 3px,
+      rgba(255, 255, 255, 0.12) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(0, 0, 0, 0.08) 3px,
+      rgba(0, 0, 0, 0.08) 4px
+    );
+}
+
+.fabric-drift {
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 11px,
+      rgba(245, 244, 241, 0.07) 11px,
+      rgba(245, 244, 241, 0.07) 12px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 11px,
+      rgba(245, 244, 241, 0.05) 11px,
+      rgba(245, 244, 241, 0.05) 12px
+    );
+  background-size: 48px 48px, 36px 36px;
+  animation: fabric-drift 18s linear infinite;
+}
+
+.hero-grain::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  opacity: 0.1;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(255, 255, 255, 0.35) 1px,
+      rgba(255, 255, 255, 0.35) 2px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 3px,
+      rgba(0, 0, 0, 0.06) 3px,
+      rgba(0, 0, 0, 0.06) 4px
+    );
+  animation: grain-shift 18s linear infinite;
+}
