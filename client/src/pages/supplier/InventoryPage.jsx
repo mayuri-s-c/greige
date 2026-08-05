@@ -259,7 +259,7 @@ export default function InventoryPage() {
                   <div
                     className="h-36 w-full"
                     style={{
-                      background: `linear-gradient(145deg, ${preview}, #e2dfd8)`,
+                      background: `linear-gradient(145deg, ${preview}, #e2e8f0)`,
                     }}
                   />
                   <div className="space-y-3 p-4">
@@ -311,7 +311,7 @@ export default function InventoryPage() {
             <div
               className="h-40 w-full"
               style={{
-                background: `linear-gradient(145deg, ${previewFor(detailProduct)}, #e2dfd8)`,
+                background: `linear-gradient(145deg, ${previewFor(detailProduct)}, #e2e8f0)`,
               }}
             />
 

@@ -20,11 +20,11 @@ export default function CartPage() {
     }, 0);
   }, [cart]);
 
+  const items = useMemo(() => [...(cart?.items || [])].reverse(), [cart]);
+
   if (loading && !cart) {
     return <p className="mx-auto max-w-7xl px-4 py-16 text-ink-soft md:px-6">Loading cart…</p>;
   }
-
-  const items = useMemo(() => [...(cart?.items || [])].reverse(), [cart]);
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 md:px-6">
@@ -63,7 +63,7 @@ export default function CartPage() {
                     <div
                       className="h-36 w-full shrink-0 sm:h-28 sm:w-28"
                       style={{
-                        background: `linear-gradient(145deg, ${previewHex}, #e2dfd8)`,
+                        background: `linear-gradient(145deg, ${previewHex}, #e2e8f0)`,
                       }}
                       aria-hidden
                     />

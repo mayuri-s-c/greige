@@ -1,13 +1,13 @@
 const statusMeta = {
-  pending: { className: 'bg-[#e2dfd8] text-[#12141a]', emoji: '⏳' },
-  accepted: { className: 'bg-[#d7e4f2] text-[#1a3654]', emoji: '✅' },
-  preparing: { className: 'bg-[#e8eef5] text-[#1a3654]', emoji: '🧵' },
-  ready_for_dispatch: { className: 'bg-[#d0e0f0] text-[#102538]', emoji: '📦' },
-  completed: { className: 'bg-[#d8efe0] text-[#14532d]', emoji: '🎉' },
-  declined: { className: 'bg-[#fce8e6] text-[#b42318]', emoji: '⛔' },
-  cancelled: { className: 'bg-[#ebeae6] text-[#5c6170]', emoji: '🚫' },
-  available: { className: 'bg-[#d8efe0] text-[#14532d]', emoji: '🟢' },
-  out_of_stock: { className: 'bg-[#fce8e6] text-[#b42318]', emoji: '⚠️' },
+  pending: { className: 'bg-[#e2e8f0] text-[#0f172a]', emoji: '⏳' },
+  accepted: { className: 'bg-[#ccfbf1] text-[#0f766e]', emoji: '✅' },
+  preparing: { className: 'bg-[#e0f2fe] text-[#0369a1]', emoji: '🧵' },
+  ready_for_dispatch: { className: 'bg-[#cffafe] text-[#0e7490]', emoji: '📦' },
+  completed: { className: 'bg-[#dcfce7] text-[#166534]', emoji: '🎉' },
+  declined: { className: 'bg-[#fee2e2] text-[#b91c1c]', emoji: '⛔' },
+  cancelled: { className: 'bg-[#f1f5f9] text-[#64748b]', emoji: '🚫' },
+  available: { className: 'bg-[#dcfce7] text-[#166534]', emoji: '🟢' },
+  out_of_stock: { className: 'bg-[#fee2e2] text-[#b91c1c]', emoji: '⚠️' },
 };
 
 export function StatusBadge({ status }) {

@@ -249,7 +249,7 @@ export default function BoardsPage() {
                           <span
                             className="h-11 w-11 shrink-0 border border-line/60 md:h-12 md:w-12"
                             style={{
-                              background: `linear-gradient(145deg, ${preview}, #e2dfd8)`,
+                              background: `linear-gradient(145deg, ${preview}, #e2e8f0)`,
                             }}
                             aria-hidden
                           />

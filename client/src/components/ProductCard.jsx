@@ -2,38 +2,38 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useCartStore } from '../store/cartStore';
 
-const accents = ['#1a3654', '#2a3344', '#3d4a3a', '#4a5568', '#5c4a3a', '#364152'];
+const accents = ['#0d9488', '#0f766e', '#334155', '#475569', '#0f766e', '#1e293b'];
 
 const COLORWAY_MAP = {
-  ivory: '#f5f4f1',
-  navy: '#1a3654',
-  sky: '#8eacc4',
-  indigo: '#1a3654',
-  black: '#12141a',
+  ivory: '#f8fafc',
+  navy: '#1e3a5f',
+  sky: '#7dd3fc',
+  indigo: '#0d9488',
+  black: '#0f172a',
   natural: '#d7c4a3',
   olive: '#5c6b4a',
   sand: '#d2b48c',
   champagne: '#e8d5b5',
   burgundy: '#6e2430',
-  charcoal: '#2f2c2a',
+  charcoal: '#334155',
   camel: '#c2a275',
-  grey: '#8a8680',
-  gray: '#8a8680',
-  'electric blue': '#2f5f9e',
+  grey: '#94a3b8',
+  gray: '#94a3b8',
+  'electric blue': '#0284c7',
   ecru: '#d8cfc0',
-  sage: '#8ea58a',
+  sage: '#86a897',
   'dusty rose': '#c49396',
-  'off-white': '#f2eee6',
-  'heather grey': '#9a9691',
-  forest: '#355640',
+  'off-white': '#f8fafc',
+  'heather grey': '#94a3b8',
+  forest: '#166534',
   khaki: '#b5a16c',
   raw: '#cfc1a8',
-  ink: '#12141a',
-  rust: '#b42318',
+  ink: '#0f172a',
+  rust: '#dc2626',
   'buffalo check': '#5c2a2a',
-  'navy windowpane': '#1a3654',
-  storm: '#5a6675',
-  white: '#f7f4ee',
+  'navy windowpane': '#1e3a5f',
+  storm: '#64748b',
+  white: '#ffffff',
   beige: '#d8c9b0',
 };
 
@@ -140,7 +140,7 @@ export function fabricPreviewHex(product, preferred = []) {
   return colorway ? colorwayHex(colorway, accent) : accent;
 }
 
-function mixToward(hex, toward = '#f5f4f1', amount = 0.35) {
+function mixToward(hex, toward = '#f8fafc', amount = 0.35) {
   const parse = (h) => {
     const n = h.replace('#', '');
     return [0, 2, 4].map((i) => parseInt(n.slice(i, i + 2), 16));
@@ -159,8 +159,8 @@ function mixToward(hex, toward = '#f5f4f1', amount = 0.35) {
 
 export function colorwayGradient(label, fallbackAccent) {
   const base = colorwayHex(label, fallbackAccent);
-  const mid = mixToward(base, '#e2dfd8', 0.28);
-  const edge = mixToward(base, '#f5f4f1', 0.55);
+  const mid = mixToward(base, '#e2e8f0', 0.28);
+  const edge = mixToward(base, '#f8fafc', 0.55);
   return `linear-gradient(150deg, ${base} 0%, ${mid} 42%, ${edge} 100%)`;
 }
 
@@ -189,7 +189,7 @@ export default function ProductCard({ product, index = 0 }) {
         <div
           className="relative aspect-[4/5] overflow-hidden"
           style={{
-            background: `linear-gradient(155deg, ${preview}e6 0%, ${preview}88 42%, #e2dfd8 100%)`,
+            background: `linear-gradient(155deg, ${preview}e6 0%, ${preview}88 42%, #e2e8f0 100%)`,
           }}
         >
           <div className="weave-overlay absolute inset-0 opacity-40 transition duration-700 group-hover:scale-110" />

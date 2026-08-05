@@ -218,7 +218,7 @@ export default function MarketplacePage() {
                   <div
                     className="relative h-20 w-16 shrink-0 overflow-hidden"
                     style={{
-                      background: `linear-gradient(145deg, ${preview} 0%, ${preview}cc 48%, #e2dfd8 100%)`,
+                      background: `linear-gradient(145deg, ${preview} 0%, ${preview}cc 48%, #e2e8f0 100%)`,
                     }}
                   >
                     <div className="weave-overlay absolute inset-0 opacity-35" />

@@ -17,7 +17,7 @@ function ClothChip({ product }) {
         style={{
           background: color
             ? colorwayGradient(color, accent)
-            : `linear-gradient(145deg, ${accent}, #e2dfd8)`,
+            : `linear-gradient(145deg, ${accent}, #e2e8f0)`,
         }}
       />
       <p className="text-[10px] uppercase tracking-[0.14em] text-ink-soft">{product.category}</p>
@@ -117,7 +117,7 @@ export default function CompareLoomModal({
               <div
                 className="absolute inset-0"
                 style={{
-                  background: 'linear-gradient(115deg, #1a3654 0%, #1a1e28 55%, #12141a 100%)',
+                  background: 'linear-gradient(115deg, #0f766e 0%, #134e4a 55%, #0f172a 100%)',
                 }}
               />
               <div className="relative flex items-start justify-between gap-4">

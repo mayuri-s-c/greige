@@ -255,7 +255,7 @@ export default function WarpPanel() {
                 <div
                   className="absolute inset-0 opacity-90"
                   style={{
-                    background: 'linear-gradient(120deg, #1a3654, #1a1e28 55%, #12141a)',
+                    background: 'linear-gradient(120deg, #0f766e, #134e4a 55%, #0f172a)',
                   }}
                 />
                 <div className="relative flex items-start justify-between text-linen">

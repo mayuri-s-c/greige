@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 
 const bolts = [
-  { x: '8%', y: '18%', w: 120, h: 180, rotate: -12, color: '#c4baa8', delay: 1.1 },
-  { x: '22%', y: '42%', w: 100, h: 160, rotate: 8, color: '#1a3654', delay: 1.25 },
-  { x: '72%', y: '16%', w: 130, h: 200, rotate: 14, color: '#d8c9b0', delay: 1.35 },
+  { x: '8%', y: '18%', w: 120, h: 180, rotate: -12, color: '#cbd5e1', delay: 1.1 },
+  { x: '22%', y: '42%', w: 100, h: 160, rotate: 8, color: '#0d9488', delay: 1.25 },
+  { x: '72%', y: '16%', w: 130, h: 200, rotate: 14, color: '#94a3b8', delay: 1.35 },
   { x: '84%', y: '48%', w: 110, h: 170, rotate: -8, color: '#5c6b4a', delay: 1.45 },
-  { x: '58%', y: '58%', w: 95, h: 150, rotate: 4, color: '#8a8680', delay: 1.55 },
+  { x: '58%', y: '58%', w: 95, h: 150, rotate: 4, color: '#64748b', delay: 1.55 },
 ];
 
 /**
@@ -21,7 +21,7 @@ export default function FabricHeroMotion({ className = '' }) {
         className="absolute inset-0"
         style={{
           background:
-            'linear-gradient(125deg, #12141a 0%, #1a3654 48%, #2a3344 78%, #c4c0b6 100%)',
+            'linear-gradient(125deg, #0f172a 0%, #0f766e 48%, #334155 78%, #cbd5e1 100%)',
         }}
       />
 
@@ -81,7 +81,7 @@ export default function FabricHeroMotion({ className = '' }) {
           <div
             className="h-full w-full shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
             style={{
-              background: `linear-gradient(160deg, ${bolt.color} 0%, ${bolt.color}cc 45%, #e2dfd8 100%)`,
+              background: `linear-gradient(160deg, ${bolt.color} 0%, ${bolt.color}cc 45%, #e2e8f0 100%)`,
               transform: `rotate(${bolt.rotate}deg)`,
             }}
           >

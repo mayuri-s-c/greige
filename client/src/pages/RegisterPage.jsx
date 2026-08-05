@@ -28,7 +28,7 @@ export default function RegisterPage() {
         className="absolute inset-0"
         style={{
           background:
-            'linear-gradient(125deg, #12141a 0%, #1a3654 55%, #2a3344 100%)',
+            'linear-gradient(125deg, #0f172a 0%, #0f766e 55%, #334155 100%)',
         }}
       />
       <div className="relative z-10 mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-4 py-14 text-linen md:px-6">
