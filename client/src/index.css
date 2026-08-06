@@ -130,12 +130,19 @@ button.btn-primary {
   background: rgba(255, 255, 255, 0.55);
   padding: 0.7rem 1.2rem;
   font-weight: 500;
+  color: var(--color-ink);
   transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+a.btn-secondary,
+button.btn-secondary {
+  color: var(--color-ink);
 }
 
 .btn-secondary:hover {
   border-color: var(--color-ink);
   background: #fff;
+  color: var(--color-ink);
 }
 
 .btn-accent {
@@ -147,8 +154,14 @@ button.btn-primary {
   transition: background 0.15s ease;
 }
 
+a.btn-accent,
+button.btn-accent {
+  color: #f8fafc;
+}
+
 .btn-accent:hover {
   background: var(--color-indigo-deep);
+  color: #f8fafc;
 }
 
 .status-dot {

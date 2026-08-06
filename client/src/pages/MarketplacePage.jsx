@@ -110,10 +110,12 @@ export default function MarketplacePage() {
             <div className="mt-6 flex flex-wrap gap-2">
               <Link
                 to="/match"
-                className="inline-flex items-center gap-2 bg-linen px-4 py-2.5 text-sm font-medium text-ink transition hover:bg-white"
+                className="btn-accent inline-flex items-center gap-2 px-4 py-2.5 text-sm"
               >
                 Sample Match
-                <span className="text-[10px] uppercase tracking-wider text-ink/55">New</span>
+                <span className="bg-linen/20 px-1.5 py-0.5 text-[10px] uppercase tracking-wider text-linen">
+                  New
+                </span>
               </Link>
             </div>
           </motion.div>

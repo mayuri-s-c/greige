@@ -81,10 +81,13 @@ function GuestStudio({ openWarp }) {
             <HomeIcon className="h-4 w-4" />
             Browse floor
           </Link>
+          <Link to="/match" className="btn-accent inline-flex items-center gap-2 text-sm">
+            Sample Match
+          </Link>
           <button
             type="button"
             onClick={() => openWarp('Suggest fabrics for a summer shirt program under 180 GSM')}
-            className="btn-accent inline-flex items-center gap-2 text-sm"
+            className="btn-secondary inline-flex items-center gap-2 text-sm"
           >
             <WarpIcon className="h-4 w-4" />
             Ask Warp
@@ -350,10 +353,13 @@ export default function BuyerDashboardPage() {
             <HomeIcon className="h-4 w-4" />
             Browse floor
           </Link>
+          <Link to="/match" className="btn-accent inline-flex items-center gap-2 text-sm">
+            Sample Match
+          </Link>
           <button
             type="button"
             onClick={() => openWarp('Suggest fabrics for my next program')}
-            className="btn-accent inline-flex items-center gap-2 text-sm"
+            className="btn-secondary inline-flex items-center gap-2 text-sm"
           >
             <WarpIcon className="h-4 w-4" />
             Ask Warp
