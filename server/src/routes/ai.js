@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import Product from '../models/Product.js';
 import { chatWithWarp, compareProducts, searchFromMessage } from '../services/warp.js';
+import { hexToRgb, rankSampleMatches } from '../services/sampleMatch.js';
 
 const router = Router();
 
@@ -52,6 +53,58 @@ router.post('/search', async (req, res) => {
 
   const products = await Product.find(filter).limit(20);
   res.json({ intent, products });
+});
+
+/**
+ * Sample Match — GREIGE signature feature.
+ * Body: { hex? | r,g,b?, targetGsm?, category?, weave?, handFeel? }
+ */
+router.post('/match-sample', async (req, res) => {
+  let sampleRgb = null;
+  if (req.body.hex) {
+    sampleRgb = hexToRgb(req.body.hex);
+  } else if (
+    Number.isFinite(req.body.r) &&
+    Number.isFinite(req.body.g) &&
+    Number.isFinite(req.body.b)
+  ) {
+    sampleRgb = {
+      r: Math.min(255, Math.max(0, Math.round(req.body.r))),
+      g: Math.min(255, Math.max(0, Math.round(req.body.g))),
+      b: Math.min(255, Math.max(0, Math.round(req.body.b))),
+    };
+  }
+
+  if (!sampleRgb) {
+    return res.status(400).json({
+      message: 'Provide a sample color as hex or r/g/b from a swatch photo.',
+    });
+  }
+
+  const products = await Product.find({ status: 'available' }).limit(80);
+  const matches = rankSampleMatches(products, sampleRgb, {
+    targetGsm: req.body.targetGsm,
+    category: req.body.category,
+    weave: req.body.weave,
+    handFeel: req.body.handFeel,
+  });
+
+  res.json({
+    sample: {
+      rgb: sampleRgb,
+      hex: `#${[sampleRgb.r, sampleRgb.g, sampleRgb.b]
+        .map((v) => v.toString(16).padStart(2, '0'))
+        .join('')}`,
+    },
+    matches: matches.map((row) => ({
+      ...row.product.toObject(),
+      matchScore: row.matchScore,
+      matchedColor: row.matchedColor,
+      matchedHex: row.matchedHex,
+      reasons: row.reasons,
+    })),
+    count: matches.length,
+  });
 });
 
 router.post('/compare', async (req, res) => {

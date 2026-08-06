@@ -12,7 +12,7 @@ import { SectionEyebrow, StatusBadge } from '../components/ui';
 import WarpIcon from '../components/WarpIcon';
 import CompareLoomModal from '../components/CompareLoomModal';
 import ConfirmDialog from '../components/ConfirmDialog';
-import { BoardIcon, CartIcon, CompareIcon, CheckIcon } from '../components/Icons';
+import { BoardIcon, CartIcon, CompareIcon, CheckIcon, SampleIcon } from '../components/Icons';
 
 function sortBoards(list = []) {
   return [...list].sort((a, b) =>
@@ -503,6 +503,18 @@ export default function ProductDetailPage() {
                 <CompareIcon className="h-4 w-4" />
                 {compareLoading ? 'Opening…' : 'Compare Loom'}
               </button>
+              <Link
+                to="/match"
+                state={{
+                  hex: colorwayHex(activeColor, accent),
+                  targetGsm: product.specifications?.gsm,
+                  category: product.category,
+                }}
+                className="btn-secondary inline-flex items-center gap-2"
+              >
+                <SampleIcon className="h-4 w-4" />
+                Sample Match
+              </Link>
               <button
                 type="button"
                 onClick={() =>

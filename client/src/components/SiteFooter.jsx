@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 
 const buyerLinks = [
   { to: '/', label: 'Greige Floor' },
+  { to: '/match', label: 'Sample Match' },
   { to: '/boards', label: 'Boards' },
   { to: '/cart', label: 'Cart' },
   { to: '/dashboard', label: 'Studio' },

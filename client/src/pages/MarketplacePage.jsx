@@ -107,6 +107,15 @@ export default function MarketplacePage() {
               Source by hand-feel, GSM, and colorway — then let Warp translate buyer language into
               cloth matches.
             </p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              <Link
+                to="/match"
+                className="inline-flex items-center gap-2 bg-linen px-4 py-2.5 text-sm font-medium text-ink transition hover:bg-white"
+              >
+                Sample Match
+                <span className="text-[10px] uppercase tracking-wider text-ink/55">New</span>
+              </Link>
+            </div>
           </motion.div>
 
           <motion.form

@@ -168,6 +168,20 @@ export function CompareIcon(props) {
   );
 }
 
+export function SampleIcon(props) {
+  return (
+    <Icon {...props}>
+      {(sw) => (
+        <>
+          <rect x="4" y="4" width="10" height="10" rx="1" stroke="currentColor" strokeWidth={sw} />
+          <path d="M14 10h6v10H10v-6" stroke="currentColor" strokeWidth={sw} strokeLinejoin="round" />
+          <circle cx="17" cy="15" r="1.5" fill="currentColor" />
+        </>
+      )}
+    </Icon>
+  );
+}
+
 export function PackageIcon(props) {
   return (
     <Icon {...props}>

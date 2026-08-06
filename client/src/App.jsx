@@ -15,6 +15,7 @@ import OrderConfirmationPage from './pages/OrderConfirmationPage';
 import BuyerDashboardPage from './pages/BuyerDashboardPage';
 import BuyerOnboardingPage from './pages/BuyerOnboardingPage';
 import BoardsPage from './pages/BoardsPage';
+import SampleMatchPage from './pages/SampleMatchPage';
 import SupplierDashboardPage from './pages/supplier/SupplierDashboardPage';
 import InventoryPage from './pages/supplier/InventoryPage';
 import SupplierOrdersPage from './pages/supplier/SupplierOrdersPage';
@@ -37,6 +38,7 @@ export default function App() {
       <Route element={<BuyerPublicRoute />}>
         <Route element={<BuyerLayout />}>
           <Route path="/" element={<MarketplacePage />} />
+          <Route path="/match" element={<SampleMatchPage />} />
           <Route path="/products/:id" element={<ProductDetailPage />} />
           <Route path="/dashboard" element={<BuyerDashboardPage />} />
         </Route>

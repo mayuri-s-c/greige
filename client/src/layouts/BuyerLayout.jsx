@@ -13,11 +13,13 @@ import {
   HomeIcon,
   LoginIcon,
   LogoutIcon,
+  SampleIcon,
   UserIcon,
 } from '../components/Icons';
 
 const nav = [
   { to: '/', label: 'Floor', end: true, icon: HomeIcon },
+  { to: '/match', label: 'Match', icon: SampleIcon },
   { to: '/boards', label: 'Boards', icon: BoardIcon },
   { to: '/cart', label: 'Cart', icon: CartIcon },
   { to: '/dashboard', label: 'Studio', icon: UserIcon },
@@ -163,7 +165,7 @@ export default function BuyerLayout() {
           className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-linen/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md lg:hidden"
           aria-label="Primary"
         >
-          <div className="grid grid-cols-5 gap-1 px-1 py-2 text-[10px] sm:px-2 sm:text-[11px]">
+          <div className="grid grid-cols-6 gap-0.5 px-0.5 py-2 text-[9px] sm:gap-1 sm:px-2 sm:text-[10px]">
             {nav.map((item) => {
               const Icon = item.icon;
               return (
